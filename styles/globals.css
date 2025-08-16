@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Optional global overrides for the resume */
+html, body, #__next {
+  height: 100%;
+}
+
+/* Print styles: make it print-friendly and hide interactive UI */
+@media print {
+  * {
+    -webkit-print-color-adjust: exact;
+    color-adjust: exact;
+  }
+
+  button,
+  .print\:hidden {
+    display: none !important;
+  }
+
+  .rounded-lg, .shadow-2xl {
+    border-radius: 0 !important;
+    box-shadow: none !important;
+  }
+
+  .max-w-4xl {
+    max-width: 100% !important;
+    margin: 0 !important;
+  }
+
+  body {
+    font-size: 12pt;
+  }
+}
+
+/* Small utility to avoid breaks inside experience items */
+.experience-break-avoid {
+  page-break-inside: avoid;
+}

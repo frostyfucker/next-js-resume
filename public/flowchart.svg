@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="560" viewBox="0 0 1200 560" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <style>
+    .title { font: 600 18px/1.2 "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; fill: #0f172a; }
+    .node { font: 600 16px/1.2 "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; fill: #0f172a; }
+    .subtext { font: 400 14px/1.2 "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; fill: #0f172a; }
+    .muted { font: 400 13px/1.2 "Inter", system-ui; fill: #475569; }
+    .link { stroke: #0f172a; stroke-width: 2; fill: none; marker-end: url(#arrow); }
+    .box { fill: #fff; stroke: #e6eefc; stroke-width: 4; rx: 8; }
+    .box-err { fill: #fff; stroke: #ffe6e6; stroke-width: 4; rx: 8; }
+    .small-box { fill: #f8fafc; stroke: #e2e8f0; stroke-width: 1; rx: 6; }
+    .tag { font: 400 12px/1 "JetBrains Mono", monospace; fill: #0f172a; }
+    a { cursor: pointer; }
+  </style>
+
+  <defs>
+    <marker id="arrow" markerWidth="8" markerHeight="8" refX="8" refY="4" orient="auto">
+      <path d="M0,0 L8,4 L0,8 z" fill="#0f172a" />
+    </marker>
+  </defs>
+
+  <!-- Center top: Discover Problem -->
+  <g transform="translate(300,40)">
+    <rect x="0" y="0" width="280" height="46" rx="10" class="small-box" />
+    <text x="140" y="30" text-anchor="middle" class="node">Discover Problem 🐛</text>
+  </g>
+
+  <!-- Subgraph 1 (left) -->
+  <g transform="translate(80,140)">
+    <rect x="0" y="0" width="320" height="190" class="box" style="stroke:#072ff7;"/>
+    <g transform="translate(20,16)">
+      <a xlink:href="https://www.linkedin.com/in/connor-kaiser-6a335a316/" target="_blank" title="LinkedIn">
+        <rect x="0" y="0" width="280" height="54" rx="8" fill="#eff6ff" stroke="#c7e0ff" />
+        <text x="12" y="34" class="node">Find Connor's Profile</text>
+      </a>
+      <rect x="0" y="74" width="280" height="54" rx="8" fill="#f8fafc" stroke="#e2e8f0" />
+      <text x="12" y="106" class="node">Hire Connor 🤝</text>
+    </g>
+  </g>
+
+  <!-- Subgraph 2 (right) -->
+  <g transform="translate(540,140)">
+    <rect x="0" y="0" width="320" height="190" class="box-err" style="stroke:#f70707;"/>
+    <g transform="translate(20,16)">
+      <rect x="0" y="0" width="280" height="54" rx="8" fill="#fff7f7" stroke="#ffdede" />
+      <text x="12" y="34" class="node">Google Endlessly 🔎</text>
+      <rect x="0" y="74" width="280" height="54" rx="8" fill="#fff7f7" stroke="#ffdede" />
+      <text x="12" y="106" class="node">Waste Time ⌛</text>
+    </g>
+  </g>
+
+  <!-- Arrows from Discover Problem to both subgraphs -->
+  <path d="M580 66 L320 140" class="link" />
+  <path d="M580 66 L700 140" class="link" />
+
+  <!-- Arrow from Subgraph 1 to Profit -->
+  <g transform="translate(420,360)">
+    <rect x="0" y="0" width="170" height="48" rx="8" class="small-box" />
+    <text x="85" y="32" text-anchor="middle" class="node">Profit 📈</text>
+  </g>
+  <path d="M320 290 L420 360" class="link" />
+
+  <!-- Arrow from Subgraph 2 to Cry -->
+  <g transform="translate(760,360)">
+    <rect x="0" y="0" width="140" height="48" rx="8" class="small-box" />
+    <text x="70" y="32" text-anchor="middle" class="node">Cry 😢</text>
+  </g>
+  <path d="M700 290 L760 360" class="link" />
+
+  <!-- Small labels under subgraphs -->
+  <text x="240" y="340" class="muted" text-anchor="middle">If you find Connor → Hire him and profit</text>
+  <text x="700" y="340" class="muted" text-anchor="middle">If you Google endlessly → waste time and cry</text>
+</svg>
